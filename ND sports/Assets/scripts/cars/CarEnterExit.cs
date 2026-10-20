@@ -5,7 +5,7 @@ public class CarEnterExit : MonoBehaviour
     [Header("Referencias")]
     public GameObject player;        // La Capsule (con su camara adentro)
     public GameObject carCamera;     // Camara del auto (hija del auto, desactivada al inicio)
-    public CarController car;        // El CarController del auto
+    public CarHandler car;           // El CarHandler del auto
     public Transform exitPoint;      // Opcional: lugar donde aparece el jugador al bajar
 
     [Header("Config")]
@@ -17,7 +17,7 @@ public class CarEnterExit : MonoBehaviour
 
     void Awake()
     {
-        if (car == null) car = GetComponent<CarController>();
+        if (car == null) car = GetComponent<CarHandler>();
     }
 
     void Start()
